@@ -1,17 +1,17 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> ans;
-        map<int, int> d;
+        vector<int> solution;
+        map<int, int> mymap;
         for (int i = 0; i < nums.size(); i++) {
             int t = target - nums[i];
-            if (d.find(t) != d.end()) {
-                ans.push_back(d[t]);
-                ans.push_back(i);
+            if (mymap.find(t) != mymap.end()) {
+                solution.push_back(mymap[t]);
+                solution.push_back(i);
                 break;
             }
-            d[nums[i]] = i;
+            mymap[nums[i]] = i;
         }
-        return ans;
+        return solution;
     }
 };
