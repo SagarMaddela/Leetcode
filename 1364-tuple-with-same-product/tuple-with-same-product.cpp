@@ -14,9 +14,7 @@ public:
 
         for (const auto &iter : store) {
             int count = iter.second;
-            if (count > 1) {
                 total_count += (count * (count - 1)) / 2; 
-            }
         }
 
         return total_count * 8;  
